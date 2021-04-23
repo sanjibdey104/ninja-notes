@@ -1,0 +1,105 @@
+.display-notes {
+    display: grid;
+    place-content: center;
+    padding: 1rem 0;
+}
+
+.notes-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.note-card {
+    width: 15rem;
+    height: 12rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    background-color: $bg-light;
+    color: $text-dark;
+    position: relative;
+    transform: rotate(5deg);
+
+
+    &.marked {
+        #bookmark {
+            color: $text-marked;
+
+            &:hover::after {
+                content: "unmark";
+            }
+        }
+    }
+
+    
+    .note-title {
+        width: 10rem;
+        font-size: 1rem;
+    }
+
+    .note-content {
+        font-size: 0.85rem;
+    }
+
+    .user-badge {
+        width: 2rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border-radius: 50%;
+        padding: 2px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    #bookmark {
+        width: 2rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        padding: 2px;
+        text-shadow: 0 0 3px rgba(0,0,0,0.5);
+        cursor: pointer;
+        color: $bg-light;
+
+        &:hover::after {
+            content: "mark";
+            display: block;
+
+            color: $text-dark;
+            padding: 0.3rem;
+            width: fit-content;
+            font-family: $primary-font;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-shadow: none;
+    
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        .edit-btn {
+            background-color: $btn-blue;
+        }
+        
+        .delete-btn {
+            background-color: $btn-red;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon/ninja_32.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ninja Notes</title>
+
+    <script src="https://kit.fontawesome.com/991c226565.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h2>
+                <img class="kunai spin" src="./svgs/header/kunai.svg" alt="kunai">
+                Ninja Notes
+            </h2>
+        </header>
+
+
+        <div class="sidebar">
+            <ul class="social-list">
+                <li data-tooltip="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li data-tooltip="github"><a href="#"><i class="fab fa-github"></i></a></li>
+                <li data-tooltip="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li data-tooltip="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li> 
+                <li data-tooltip="theme switcher" class="theme-switcher">
+                    <img class="moon-icon" src="./svgs/sidebar/moon-dark-theme.svg" alt="moon icon">
+                    <img class="sun-icon" src="./svgs/sidebar/sun-light-theme.svg" alt="sun icon">
+                </li>
+            </ul>
+            <button class="sidebar-toggle-btn">
+                <img class="tap-to-toggle" src="./svgs/sidebar/tap-to-toggle.svg" alt="">
+            </button>
+        </div>
+
+        <div class="credits-bar">
+            <div class="credits">
+                SVG icons made by 
+                <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+        </div>
+
+
+        <section class="create-notes">
+            <img class="ninja-landing" src="./svgs/header/ninja-landing.svg" alt="ninja landing">
+            <form action="#" class="note-form">
+                <input type="text" name="title" id="title" placeholder="title">
+                <input type="text" name="title" id="content" placeholder="content">
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+
+        <section class="display-notes">
+            <ul class="notes-list">
+                
+            </ul>
+        </section>
+    </div>
+    
+</body>
+</html>

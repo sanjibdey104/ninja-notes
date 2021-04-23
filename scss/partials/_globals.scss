@@ -1,0 +1,76 @@
+$bg-dark: #1f1f1f;
+$bg-light: #f8f9fa;
+$text-light: #f8f9fa; 
+$text-dark: #292929;
+$text-night: #64ffda;
+$text-marked: #d00000;
+$primary-font: 'Playfair Display', serif;
+
+$btn-red: #d62828;
+$btn-green: #2d6a4f;
+$btn-blue: #023e8a;
+$btn-text: #f8f9fa;
+$border-dark: #000;
+$border-light: #f8f9fa;
+$border-night: #64ffda;
+$link-blue: #0077b6;
+
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    line-height: 1.3;
+    font-family: $primary-font;
+    background-color: $bg-light;
+    color: $text-dark;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+button {
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: $btn-text;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+img {
+    display: block;
+}

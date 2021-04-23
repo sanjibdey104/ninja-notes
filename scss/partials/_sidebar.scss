@@ -1,0 +1,59 @@
+.sidebar {
+    position: fixed;
+    right: 1rem;
+    bottom: 0;
+   
+    .sidebar-toggle-btn {
+        display: none;
+    }
+    
+}
+
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .fab {
+        font-size: 1.4rem;
+        color: $bg-dark;
+        position: relative;
+    }
+
+    li:hover::before {
+        content: attr(data-tooltip);
+        display: block;
+        color: $text-dark;
+        padding: 0.3rem;
+        width: fit-content;
+        font-family: $primary-font;
+        font-size: 0.75rem;
+        font-weight: 500;
+
+        position: absolute;
+        right: 2rem;
+    }
+
+    .sun-icon, .moon-icon {
+        width: 1.5rem;
+        cursor: pointer;
+    }
+
+    .moon-icon {
+        display: block;
+    }
+
+    .sun-icon {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0.5px;
+        height: 8rem;
+        background-color: $bg-dark;
+    }
+}    
