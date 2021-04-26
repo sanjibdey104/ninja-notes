@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon/ninja_32.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Ninja Notes</title>
 
@@ -23,7 +25,7 @@
         </header>
 
 
-        <div class="sidebar">
+        <div class="social-sidebar">
             <ul class="social-list">
                 <li data-tooltip="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                 <li data-tooltip="github"><a href="#"><i class="fab fa-github"></i></a></li>
@@ -39,8 +41,8 @@
             </button>
         </div>
 
-        <div class="credits-bar">
-            <div class="credits">
+        <div class="attribution-bar">
+            <div class="attribution">
                 SVG icons made by 
                 <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
@@ -52,7 +54,8 @@
             <img class="ninja-landing" src="./svgs/header/ninja-landing.svg" alt="ninja landing">
             <form action="#" class="note-form">
                 <input type="text" name="title" id="title" placeholder="title">
-                <input type="text" name="title" id="content" placeholder="content">
+                <!-- <input type="text" name="content" id="content" placeholder="content"> -->
+                <textarea name="content" id="content" cols="30" rows="5" placeholder="content..."></textarea>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>
         </section>

@@ -1,10 +1,12 @@
 $bg-dark: #1f1f1f;
 $bg-light: #f8f9fa;
 $text-light: #f8f9fa; 
-$text-dark: #292929;
+$text-dark: #1b1b1b;
 $text-night: #64ffda;
 $text-marked: #d00000;
-$primary-font: 'Playfair Display', serif;
+$primary-font: 'Inconsolata', monospace;
+$secondary-font: 'Playfair Display', serif;
+
 
 $btn-red: #d62828;
 $btn-green: #2d6a4f;
@@ -44,7 +46,7 @@ ul {
     list-style: none;
 }
 
-button, input {
+button, input, textarea {
     font-family: inherit;
 }
 

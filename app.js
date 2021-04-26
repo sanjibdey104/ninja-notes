@@ -3,7 +3,6 @@ let submitBtn = noteForm.querySelector('.submit-btn');
 let title = noteForm.querySelector('#title');
 let content = noteForm.querySelector('#content');
 const notesList = document.querySelector('.notes-list');
-const noteCard = document.querySelector('.note-card');
 const bookmark = document.querySelector('#bookmark');
 
 
@@ -67,7 +66,7 @@ function fetchNotes() {
     let notesJsonData = localStorage.getItem('notesData');
     let notesObjData = JSON.parse(notesJsonData);
 
-    if(notesObjData === null) {    // if no were there notes in storage
+    if(notesObjData === null) {    // if no there were notes in storage
         notesArr = [];
     }
     else {
@@ -130,6 +129,8 @@ function updateLocalStorage(arr) {
 
 function createNewNote(noteObj) {
 
+
+    // list to badges appearing at top right corner of the note card
     const badges = [
         "./svgs/random-ninjas/ninja-one.svg",
         "./svgs/random-ninjas/ninja-two.svg",
@@ -137,8 +138,10 @@ function createNewNote(noteObj) {
         "./svgs/random-ninjas/ninja-four.svg",
         "./svgs/random-ninjas/ninja-five.svg",
     ]
+    // select a random badge from the list and attach to the note card
     let num = Math.floor(Math.random() * badges.length);
     let src = badges[num];
+    
 
     let newNoteCard = document.createElement('div');
     newNoteCard.classList.add('note-card');

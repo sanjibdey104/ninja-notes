@@ -15,9 +15,9 @@ body {
   height: 100vh;
   width: 100%;
   line-height: 1.3;
-  font-family: "Playfair Display", serif;
+  font-family: "Inconsolata", monospace;
   background-color: #f8f9fa;
-  color: #292929;
+  color: #1b1b1b;
 }
 
 a {
@@ -28,7 +28,7 @@ ul {
   list-style: none;
 }
 
-button, input {
+button, input, textarea {
   font-family: inherit;
 }
 
@@ -103,13 +103,13 @@ h2 .kunai.spin {
   }
 }
 
-.sidebar {
+.social-sidebar {
   position: fixed;
   right: 1rem;
   bottom: 0;
 }
 
-.sidebar .sidebar-toggle-btn {
+.social-sidebar .sidebar-toggle-btn {
   display: none;
 }
 
@@ -136,13 +136,13 @@ h2 .kunai.spin {
 .social-list li:hover::before {
   content: attr(data-tooltip);
   display: block;
-  color: #292929;
+  color: #1b1b1b;
   padding: 0.3rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: "Playfair Display", serif;
-  font-size: 0.75rem;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.8rem;
   font-weight: 500;
   position: absolute;
   right: 2rem;
@@ -169,7 +169,7 @@ h2 .kunai.spin {
   background-color: #1f1f1f;
 }
 
-.credits-bar {
+.attribution-bar {
   position: fixed;
   left: 1rem;
   top: 0;
@@ -188,7 +188,7 @@ h2 .kunai.spin {
           justify-content: center;
 }
 
-.credits-bar::before {
+.attribution-bar::before {
   content: "";
   display: block;
   width: 0.5px;
@@ -196,7 +196,7 @@ h2 .kunai.spin {
   background-color: #1f1f1f;
 }
 
-.credits {
+.attribution {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   font-size: 0.75rem;
@@ -205,10 +205,10 @@ h2 .kunai.spin {
           writing-mode: vertical-lr;
   margin: 0.5rem 0;
   display: block;
-  color: #292929;
+  color: #1b1b1b;
 }
 
-.credits a {
+.attribution a {
   color: #0077b6;
 }
 
@@ -220,7 +220,7 @@ h2 .kunai.spin {
   width: 3rem;
   height: 3rem;
   position: absolute;
-  top: -2.75rem;
+  top: -0.3rem;
   right: 0;
   -webkit-animation: dropDown 200ms linear 1;
           animation: dropDown 200ms linear 1;
@@ -261,11 +261,11 @@ h2 .kunai.spin {
           flex-direction: column;
   gap: 1rem;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
-.note-form input {
-  font-size: 1.1rem;
+.note-form input, .note-form textarea {
+  font-size: 1.2rem;
   font-weight: 500;
   outline: none;
   padding: 0 1rem;
@@ -273,11 +273,17 @@ h2 .kunai.spin {
   border: 1px solid #000;
 }
 
-.note-form input:focus {
+.note-form input:focus, .note-form textarea:focus {
   border-color: #d00000;
 }
 
+.note-form textarea {
+  width: 20rem;
+  height: 7rem;
+}
+
 .note-form .submit-btn {
+  font-size: 0.9rem;
   background-color: #2d6a4f;
 }
 
@@ -300,12 +306,12 @@ h2 .kunai.spin {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .note-card {
-  width: 15rem;
-  height: 12rem;
+  width: 18rem;
+  height: 15rem;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,10 +327,10 @@ h2 .kunai.spin {
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   background-color: #f8f9fa;
-  color: #292929;
+  color: #1b1b1b;
   position: relative;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .note-card.marked #bookmark {
@@ -337,11 +343,16 @@ h2 .kunai.spin {
 
 .note-card .note-title {
   width: 10rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .note-card .note-content {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  max-height: 50%;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  font-family: "Inconsolata", monospace;
 }
 
 .note-card .user-badge {
@@ -369,12 +380,12 @@ h2 .kunai.spin {
 .note-card #bookmark:hover::after {
   content: "mark";
   display: block;
-  color: #292929;
+  color: #1b1b1b;
   padding: 0.3rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: "Playfair Display", serif;
+  font-family: "Inconsolata", monospace;
   font-size: 0.75rem;
   font-weight: 500;
   text-shadow: none;
@@ -410,11 +421,11 @@ body.dark-theme h2 {
   color: #64ffda;
 }
 
-body.dark-theme .note-form input {
+body.dark-theme .note-form input, body.dark-theme .note-form textarea {
   outline: none;
 }
 
-body.dark-theme .note-form input:focus {
+body.dark-theme .note-form input:focus, body.dark-theme .note-form textarea:focus {
   border: 1px solid #64ffda;
 }
 
@@ -442,23 +453,23 @@ body.dark-theme .note-card #bookmark:hover::after {
   color: #64ffda;
 }
 
-body.dark-theme .credits-bar::before {
+body.dark-theme .attribution-bar::before {
   background-color: #f8f9fa;
 }
 
-body.dark-theme .credits {
+body.dark-theme .attribution {
   color: #f8f9fa;
 }
 
-body.dark-theme .credits span {
+body.dark-theme .attribution span {
   color: #f8f9fa;
 }
 
-body.dark-theme .credits a {
+body.dark-theme .attribution a {
   color: #64ffda;
 }
 
-body.dark-theme .sidebar .sidebar-toggle-btn {
+body.dark-theme .social-sidebar .sidebar-toggle-btn {
   background-color: #64ffda;
 }
 
@@ -488,7 +499,7 @@ body.dark-theme .social-list::after {
     position: relative;
     padding: 2rem 0;
   }
-  .sidebar {
+  .social-sidebar {
     position: fixed;
     right: 0.5rem;
     bottom: 0;
@@ -508,7 +519,7 @@ body.dark-theme .social-list::after {
     gap: 1rem;
     padding: 0;
   }
-  .sidebar .sidebar-toggle-btn {
+  .social-sidebar .sidebar-toggle-btn {
     display: block;
     position: absolute;
     padding: 1px;
@@ -517,16 +528,16 @@ body.dark-theme .social-list::after {
     background-color: #f8f9fa;
     -webkit-box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.3);
             box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.3);
-  }
-  .sidebar .sidebar-toggle-btn .tap-to-toggle {
-    width: 2rem;
-    display: block;
     -webkit-transition: -webkit-transform 200ms ease;
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease, -webkit-transform 200ms ease;
   }
-  .sidebar .social-list {
+  .social-sidebar .sidebar-toggle-btn .tap-to-toggle {
+    width: 2rem;
+    display: block;
+  }
+  .social-sidebar .social-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -547,26 +558,29 @@ body.dark-theme .social-list::after {
     transition: transform 300ms ease-in;
     transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
   }
-  .sidebar .social-list.show {
+  .social-sidebar .social-list li:hover::before {
+    content: none;
+  }
+  .social-sidebar .social-list.show {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .sidebar .social-list.show + .sidebar-toggle-btn .up-arrow {
+  .social-sidebar .social-list.show + .sidebar-toggle-btn {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
-  .sidebar .social-list::after {
+  .social-sidebar .social-list::after {
     content: "";
     display: block;
     width: 1px;
     height: 3rem;
     background-color: #1f1f1f;
   }
-  .sidebar .social-list .fab {
-    font-size: 1.5rem;
+  .social-sidebar .social-list .fab {
+    font-size: 1.75rem;
     color: #1f1f1f;
   }
-  .credits-bar {
+  .attribution-bar {
     position: absolute;
     left: unset;
     top: unset;
@@ -585,10 +599,10 @@ body.dark-theme .social-list::after {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .credits-bar::before {
+  .attribution-bar::before {
     content: none;
   }
-  .credits {
+  .attribution {
     -webkit-transform: rotate(0);
             transform: rotate(0);
     font-size: 0.75rem;
@@ -597,7 +611,7 @@ body.dark-theme .social-list::after {
             writing-mode: horizontal-tb;
     margin: 0.5rem 0;
     display: block;
-    color: #292929;
+    color: #1b1b1b;
   }
   .note-form {
     margin-bottom: 1rem;
