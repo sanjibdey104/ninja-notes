@@ -25,16 +25,16 @@ The purpose is to serve as a basic note-keeping application.
 * SASS
 
 ## Features
-List of features ready and TODOs for future development
+
 * User can create, edit, delete a new note
 * Bookmark important notes
 * Toggle application theme (dark/light)
 * Data persistence using localstorage
-* Mobile and Desktop responsive
+* Mobile and Desktop responsiveness
 
-To-do list:
-* Allow user to search for a note
-* Allow category tags for better note sorting
+   ### To-do list:
+   * Allow user to search for a note
+   * Allow category tags for better note sorting
 
 
 ## Status
@@ -51,7 +51,9 @@ Project is live with above features and in-progress with the "to-do" scope
 
 ## Contact
 Created by [@sanjib104](https://twitter.com/Sanjib_104) 
+
 Mail: sanjibdey.dey4@gmail.com
--- feel free to contact me!
+
+   *feel free to contact me!*
 
 
