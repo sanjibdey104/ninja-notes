@@ -4,12 +4,13 @@
 ### live app link: https://sanjibdey104.github.io/ninja-notes/
 
 ### Table of contents
-* [General inf0](#general-info)
+* [General info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
+* [Attribution](#attribution)
 * [Contact](#contact)
 
 ## General info
@@ -46,11 +47,10 @@ Project is live with above features and in-progress with the "to-do" scope
 
 ## Attribution
 * SVG icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com)
-                <a href= title="Freepik"></a> 
-                 <a href="https://www.flaticon.com/" title="Flaticon"></a>
-            </div>
 
 ## Contact
-Created by [@sanjib104](https://twitter.com/Sanjib_104) - feel free to contact me!
+Created by [@sanjib104](https://twitter.com/Sanjib_104) 
+Mail: sanjibdey.dey4@gmail.com
+-- feel free to contact me!
 
 
