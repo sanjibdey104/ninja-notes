@@ -17,7 +17,7 @@
 The purpose is to serve as a basic note-keeping application.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./image/desktop-screenshot.png)
 
 ## Technologies
 * Vanilla Javascript
@@ -30,6 +30,7 @@ List of features ready and TODOs for future development
 * Bookmark important notes
 * Toggle application theme (dark/light)
 * Data persistence using localstorage
+* Mobile and Desktop responsive
 
 To-do list:
 * Allow user to search for a note
