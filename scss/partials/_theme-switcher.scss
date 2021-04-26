@@ -1,6 +1,10 @@
 body.dark-theme {
     background-color: $bg-dark;
     color: $text-light;
+        
+    &::-webkit-scrollbar-thumb {
+        border: 1px solid $border-night;
+    }
 
     h2 {
         color: $text-night;

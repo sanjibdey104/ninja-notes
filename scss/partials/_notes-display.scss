@@ -50,6 +50,19 @@
         margin-bottom: 1rem;
         overflow-y: auto;
         font-family: $primary-font;
+
+        &::-webkit-scrollbar {
+            width: 0.3rem;
+        }
+        
+        &::-webkit-scrollbar-track {
+            box-shadow: none;
+            border-radius: 1rem;
+        }
+                  
+        &::-webkit-scrollbar-thumb {
+            border: 1px solid $border-dark;
+        }
     }
 
     .user-badge {

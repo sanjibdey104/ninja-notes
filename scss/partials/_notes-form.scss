@@ -7,7 +7,7 @@
 
         position: absolute;
         top: -0.3rem;
-        right: 0;
+        right: -0.2rem;
         animation: dropDown 200ms linear 1;
     }
 
@@ -29,27 +29,31 @@
     gap: 1rem;
     position: relative;
     margin-bottom: 1rem;
-
+    
     input, textarea {
-        font-size: 1.2rem;
         font-weight: 500;
         outline: none;
         padding: 0 1rem;
         border-radius: 0.5rem;
         border: 1px solid $border-dark;
-
+        
         &:focus {
             border-color: $text-marked;
         }
     }
 
+    input {
+        font-size: 1.2rem;
+    }
+    
     textarea {
+        font-size: 1.2rem;
         width: 20rem;
         height: 7rem;
     }
 
     .submit-btn {
-        font-size: 0.9rem;
+        font-size: 1rem;
         background-color: $btn-green;
     }
 }

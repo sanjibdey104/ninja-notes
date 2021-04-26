@@ -37,6 +37,7 @@ button {
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
+  font-size: 1rem;
   color: #f8f9fa;
   -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
@@ -64,6 +65,21 @@ button {
 
 img {
   display: block;
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #1f1f1f;
+          box-shadow: inset 0 0 5px #1f1f1f;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid #000;
+  border-radius: 1rem;
 }
 
 h2 {
@@ -107,6 +123,7 @@ h2 .kunai.spin {
   position: fixed;
   right: 1rem;
   bottom: 0;
+  z-index: 10;
 }
 
 .social-sidebar .sidebar-toggle-btn {
@@ -221,7 +238,7 @@ h2 .kunai.spin {
   height: 3rem;
   position: absolute;
   top: -0.3rem;
-  right: 0;
+  right: -0.2rem;
   -webkit-animation: dropDown 200ms linear 1;
           animation: dropDown 200ms linear 1;
 }
@@ -265,7 +282,6 @@ h2 .kunai.spin {
 }
 
 .note-form input, .note-form textarea {
-  font-size: 1.2rem;
   font-weight: 500;
   outline: none;
   padding: 0 1rem;
@@ -277,13 +293,18 @@ h2 .kunai.spin {
   border-color: #d00000;
 }
 
+.note-form input {
+  font-size: 1.2rem;
+}
+
 .note-form textarea {
+  font-size: 1.2rem;
   width: 20rem;
   height: 7rem;
 }
 
 .note-form .submit-btn {
-  font-size: 0.9rem;
+  font-size: 1rem;
   background-color: #2d6a4f;
 }
 
@@ -355,6 +376,20 @@ h2 .kunai.spin {
   font-family: "Inconsolata", monospace;
 }
 
+.note-card .note-content::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.note-card .note-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 1rem;
+}
+
+.note-card .note-content::-webkit-scrollbar-thumb {
+  border: 1px solid #000;
+}
+
 .note-card .user-badge {
   width: 2rem;
   position: absolute;
@@ -415,6 +450,10 @@ h2 .kunai.spin {
 body.dark-theme {
   background-color: #1f1f1f;
   color: #f8f9fa;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+  border: 1px solid #64ffda;
 }
 
 body.dark-theme h2 {
@@ -499,9 +538,12 @@ body.dark-theme .social-list::after {
     position: relative;
     padding: 2rem 0;
   }
+  button, .submit-btn {
+    font-size: 1.1rem;
+  }
   .social-sidebar {
     position: fixed;
-    right: 0.5rem;
+    right: 0.3rem;
     bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -616,8 +658,21 @@ body.dark-theme .social-list::after {
   .note-form {
     margin-bottom: 1rem;
   }
+  .note-form input {
+    font-size: 1.3rem;
+  }
+  .note-form .submit-btn {
+    font-size: 1.1rem;
+  }
   .display-notes {
     margin-bottom: 2rem;
+  }
+  .note-card .note-title {
+    width: 15rem;
+    font-size: 1.3rem;
+  }
+  .note-card .note-content {
+    font-size: 1.1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
