@@ -1,7 +1,7 @@
 # Ninja Notes
-> A CRUD note taking app
+A vanilla JS CRUD centric note taking app with localStorage for data persistency
 
-### live app link: https://sanjibdey104.github.io/ninja-notes/
+#### catch it live @ https://sanjibdey104.github.io/ninja-notes/
 
 ### Table of contents
 * [General info](#general-info)
