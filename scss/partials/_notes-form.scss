@@ -35,7 +35,8 @@
     outline: none;
     padding: 0.3rem 1rem;
     border-radius: 0.5rem;
-    border: 1px solid $border-light;
+    border: 1px solid rgba(70, 70, 70, 0.3);
+    box-shadow: $box-shadow;
 
     &:hover,
     &:focus {
