@@ -28,10 +28,23 @@ function fetchNotes() {
 
 //------------------------------------------------ Creating a new note
 
+// color themes
+const colorThemes = ["#ffe97f", "#d6e592", "#ffccd5", "#ade8f4"];
+
+// ninja badges
+const ninjaBadgeSrc = [
+  "./assets/svgs/random-ninjas/ninja-one.svg",
+  "./assets/svgs/random-ninjas/ninja-two.svg",
+  "./assets/svgs/random-ninjas/ninja-three.svg",
+  "./assets/svgs/random-ninjas/ninja-four.svg",
+  "./assets/svgs/random-ninjas/ninja-five.svg",
+];
+
+// note form config
 noteForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Since we are using the same button for submitting a note and later updating a note if required
+  // Since we are using the same button for submitting later updating a note
   // So we are validating the current state of the button using custom "data" property "data-btn-type"
   // if "update" then it will trigger the "updateNote" function, else carry on with usual note submission
 
@@ -39,14 +52,21 @@ noteForm.addEventListener("submit", (e) => {
     updateNote();
     noteForm.reset();
   } else {
+    // make sure user inputs both value
     if (title.value && content.value) {
-      // make sure user inputs both value
+      let randomThemeIndex = Math.floor(Math.random() * colorThemes.length);
+      let noteTheme = colorThemes[randomThemeIndex];
+
+      let randomBadgeIndex = Math.floor(Math.random() * ninjaBadgeSrc.length);
+      let noteBadgeSrc = ninjaBadgeSrc[randomBadgeIndex];
 
       // defining the new note object structure and properties
       let newNoteObj = {
         id: notesArr.length,
         title: title.value,
         content: content.value,
+        theme: noteTheme,
+        badgeSrc: noteBadgeSrc,
         isMarked: false,
       };
 
@@ -67,39 +87,23 @@ function updateLocalStorage(arr) {
 //------------------------------------------ Creating a new note card and manipulating DOM
 
 function createNewNote(noteObj) {
-  // note color themes
-  const colorThemes = ["#ffe97f", "#d6e592", "#ffccd5", "#ade8f4"];
-
-  let randomThemeIndex = Math.floor(Math.random() * colorThemes.length);
-  let noteColor = colorThemes[randomThemeIndex];
-
-  // list to badges appearing at top right corner of the note card
-  const badges = [
-    "./assets/svgs/random-ninjas/ninja-one.svg",
-    "./assets/svgs/random-ninjas/ninja-two.svg",
-    "./assets/svgs/random-ninjas/ninja-three.svg",
-    "./assets/svgs/random-ninjas/ninja-four.svg",
-    "./assets/svgs/random-ninjas/ninja-five.svg",
-  ];
-  // select a random badge from the list and attach to the note card
-  let num = Math.floor(Math.random() * badges.length);
-  let src = badges[num];
+  const { theme, badgeSrc } = noteObj;
 
   let newNoteCard = document.createElement("div");
   newNoteCard.classList.add("note-card");
-  newNoteCard.style.backgroundColor = noteColor;
+  newNoteCard.style.backgroundColor = theme;
 
   // attaching the "id" to the noteCard so we can refer to it later while "deleting" or "updating" a note
   newNoteCard.id = noteObj.id;
   newNoteCard.innerHTML = `
     <h3 class="note-title">${noteObj.title}</h3>
-    <img class="user-badge" src="${src}" alt="ninja">
+    <img class="user-badge" src="${badgeSrc}" alt="ninja badge">
     <p class="note-content">${noteObj.content}</p>
     <div class="buttons">
         <button class="edit-btn">Edit</button>
         <button class="delete-btn">Delete</button>
     </div>
-    <i id="bookmark" class="fa fa-bookmark"></i>`;
+    <i id="bookmark" class="fa fa-bookmark" aria-label="bookmark"></i>`;
 
   if (noteObj.isMarked) {
     newNoteCard.classList.add("marked");
