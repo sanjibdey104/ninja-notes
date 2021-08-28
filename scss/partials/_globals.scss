@@ -1,11 +1,9 @@
 $bg-light: #f5f5f5;
 $bg-darker: #e0e0e0;
-$text-light: #f5f5f5;
-$text-dark: #212121;
-$text-marked: #d00000;
 $fg-bold: #212121;
-$fg-light: #313131;
-$fg-lighter: #616161;
+$fg-dim: #313131;
+$fg-dimmer: #616161;
+$fg-light: #f5f5f5;
 $fg-marked: #d00000;
 $primary-font: "Montserrat", sans-serif;
 $secondary-font: "Lora", serif;
@@ -14,9 +12,9 @@ $box-shadow: inset 0 0 3px rgba(19, 19, 19, 0.15),
 $hover-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.2),
   2px 2px 5px rgba(0, 0, 0, 0.1);
 
-$btn-red: #e94a4a;
-$btn-green: #28c47e;
-$btn-blue: #2d81f0;
+$btn-red: #e45858;
+$btn-green: #2acc83;
+$btn-blue: #398af5;
 $accent-color: #4262ff;
 $accent-color-lighter: #8092ec;
 $border-light: #c0c0c0;
@@ -41,7 +39,7 @@ body {
   line-height: 1.3;
   font-family: $primary-font;
   background-color: $bg-light;
-  color: $fg-light;
+  color: $fg-dim;
 }
 
 h2,
@@ -68,7 +66,7 @@ button {
   padding: 0.4rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  color: $text-light;
+  color: $fg-light;
   font-weight: 500;
   font-size: 0.75rem;
   box-shadow: $box-shadow;

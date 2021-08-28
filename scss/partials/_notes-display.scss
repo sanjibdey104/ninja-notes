@@ -28,7 +28,7 @@
 
   &.marked {
     #bookmark {
-      color: $text-marked;
+      color: $fg-marked;
 
       &:hover::after {
         content: "unmark";
@@ -57,7 +57,7 @@
 
     &::-webkit-scrollbar-thumb {
       border-radius: 1rem;
-      background-color: $fg-light;
+      background-color: $fg-dim;
     }
   }
 
@@ -78,7 +78,7 @@
     right: 0rem;
     padding: 2px;
     cursor: pointer;
-    color: $text-dark;
+    color: $fg-dim;
 
     &:hover::after {
       content: "mark";

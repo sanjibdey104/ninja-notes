@@ -206,7 +206,7 @@ h2 .kunai.spin {
 
 .note-form .submit-btn {
   font-size: 1rem;
-  background-color: #28c47e;
+  background-color: #2acc83;
 }
 
 .display-notes {
@@ -304,7 +304,7 @@ h2 .kunai.spin {
   right: 0rem;
   padding: 2px;
   cursor: pointer;
-  color: #212121;
+  color: #313131;
 }
 
 .note-card #bookmark:hover::after {
@@ -332,11 +332,11 @@ h2 .kunai.spin {
 }
 
 .note-card .buttons .edit-btn {
-  background-color: #2d81f0;
+  background-color: #398af5;
 }
 
 .note-card .buttons .delete-btn {
-  background-color: #e94a4a;
+  background-color: #e45858;
 }
 
 footer {
