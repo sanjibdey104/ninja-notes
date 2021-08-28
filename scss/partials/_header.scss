@@ -1,23 +1,22 @@
 h2 {
-    font-size: 1.75rem;
+  font-size: 1.85rem;
 
-    .kunai {
-        display: inline-block;
-        width: 2rem;
-        margin-left: 0.5rem;
+  .kunai {
+    display: inline-block;
+    width: 2rem;
+    margin-left: 0.5rem;
 
-        &.spin {
-            animation: spinRight 500ms linear 1;
-        }
+    &.spin {
+      animation: spinRight 300ms linear 1;
     }
+  }
 }
 
-
 @keyframes spinRight {
-    0% {
-        transform: translateX(-500px) rotate(0deg);
-    }
-    100% {
-        transform: translateX(0) rotate(360deg);
-    }
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

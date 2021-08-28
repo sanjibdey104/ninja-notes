@@ -1,70 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./favicon/ninja_32.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/ninja_32.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ninja Notes</title>
 
-    <script src="https://kit.fontawesome.com/991c226565.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/991c226565.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js" defer></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h2>
-                <img class="kunai spin" src="./svgs/header/kunai.svg" alt="kunai">
-                Ninja Notes
-            </h2>
-        </header>
+      <header>
+        <h2>
+          <img
+            class="kunai spin"
+            src="./assets/svgs/header/kunai.svg"
+            alt="kunai"
+          />
+          Ninja Notes
+        </h2>
+      </header>
 
+      <section class="create-notes">
+        <img
+          class="ninja-landing"
+          src="./assets/svgs/header/ninja-landing.svg"
+          alt="ninja landing"
+        />
+        <form action="#" class="note-form" aria-label="note form">
+          <input type="text" name="title" id="title" placeholder="title" />
+          <textarea
+            name="content"
+            id="content"
+            cols="30"
+            rows="5"
+            placeholder="content..."
+          ></textarea>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
 
-        <div class="social-sidebar">
-            <ul class="social-list">
-                <li data-tooltip="linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                <li data-tooltip="github"><a href="#"><i class="fab fa-github"></i></a></li>
-                <li data-tooltip="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li data-tooltip="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li> 
-                <li data-tooltip="theme switcher" class="theme-switcher">
-                    <img class="moon-icon" src="./svgs/sidebar/moon-dark-theme.svg" alt="moon icon">
-                    <img class="sun-icon" src="./svgs/sidebar/sun-light-theme.svg" alt="sun icon">
-                </li>
-            </ul>
-            <button class="sidebar-toggle-btn">
-                <img class="tap-to-toggle" src="./svgs/sidebar/tap-to-toggle.svg" alt="">
-            </button>
+      <section class="display-notes">
+        <ul class="notes-list">
+          <!-- dynamically generated notes will be displayed here  -->
+        </ul>
+      </section>
+
+      <footer>
+        <ul class="contact-links">
+          <li data-tooltip="linkedin">
+            <a
+              href="https://www.linkedin.com/in/sanjib-kumar-dey-359984130/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Linkedin"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li data-tooltip="github">
+            <a
+              href="https://github.com/sanjibdey104/ninja-notes"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Github"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li data-tooltip="twitter">
+            <a
+              href="https://twitter.com/Sanjib_104"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+        </ul>
+
+        <div class="attribution">
+          SVG icons by
+          <a
+            href="https://www.freepik.com"
+            title="Freepik"
+            target="_blank"
+            rel="noreferrer"
+            aria-label=""
+            >Freepik</a
+          >
+          from
+          <a
+            href="https://www.flaticon.com/"
+            title="Flaticon"
+            target="_blank"
+            rel="noreferrer"
+            aria-label=""
+            >www.flaticon.com</a
+          >
         </div>
 
-        <div class="attribution-bar">
-            <div class="attribution">
-                SVG icons made by 
-                <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
-                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-            </div>
-        </div>
-
-
-        <section class="create-notes">
-            <img class="ninja-landing" src="./svgs/header/ninja-landing.svg" alt="ninja landing">
-            <form action="#" class="note-form">
-                <input type="text" name="title" id="title" placeholder="title">
-                <textarea name="content" id="content" cols="30" rows="5" placeholder="content..."></textarea>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
-        </section>
-
-
-        <section class="display-notes">
-            <ul class="notes-list">
-                
-            </ul>
-        </section>
+        <p>Built with 💗 for Ninjas and JS</p>
+      </footer>
     </div>
-    
-</body>
+  </body>
 </html>
