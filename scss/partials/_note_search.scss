@@ -1,0 +1,31 @@
+.note-search {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(70, 70, 70, 0.3);
+  box-shadow: $box-shadow;
+  padding: 0 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  .search-input {
+    flex-grow: 1;
+    font-size: 1rem;
+    outline: 0;
+    border: 0;
+    background-color: inherit;
+    height: 100%;
+    padding: 0.3rem 0.5rem;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: $hover-box-shadow;
+  }
+
+  i {
+    color: $accent-color;
+  }
+}

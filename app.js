@@ -2,28 +2,44 @@ const noteForm = document.querySelector(".note-form");
 let submitBtn = noteForm.querySelector(".submit-btn");
 let title = noteForm.querySelector("#title");
 let content = noteForm.querySelector("#content");
+const searchInputField = document.querySelector(".search-input");
 const notesList = document.querySelector(".notes-list");
 const bookmark = document.querySelector("#bookmark");
+
+// initially search text is blank
+let textToSearch = "";
 
 //----------------------------------- Syncing DOM with localstorage
 
 let notesArr = []; // array to track notes
-
-fetchNotes(); // runs at the very beginning to fetch notes if already available in localstorage
+renderNotes();
 
 function fetchNotes() {
   let notesJsonData = localStorage.getItem("notesData");
-  let notesObjData = JSON.parse(notesJsonData);
+  let parsedNotesArr = JSON.parse(notesJsonData);
 
-  if (notesObjData === null) {
+  if (!parsedNotesArr) {
     // if no there were notes in storage
     notesArr = [];
+    console.log("nothing");
   } else {
-    notesArr = notesObjData;
-    for (note of notesArr) {
-      createNewNote(note);
-    }
+    notesArr = parsedNotesArr;
   }
+}
+
+// rendering notes
+function renderNotes() {
+  fetchNotes();
+
+  notesList.innerHTML = "";
+
+  let filteredNotesArr = notesArr.filter(
+    (note) =>
+      note.title.toLowerCase().includes(textToSearch) ||
+      note.content.toLowerCase().includes(textToSearch)
+  );
+
+  filteredNotesArr.forEach((note) => generateNote(note));
 }
 
 //------------------------------------------------ Creating a new note
@@ -72,7 +88,7 @@ noteForm.addEventListener("submit", (e) => {
 
       notesArr.push(newNoteObj);
       updateLocalStorage(notesArr);
-      createNewNote(newNoteObj);
+      generateNote(newNoteObj);
       noteForm.reset();
     }
   }
@@ -84,17 +100,15 @@ function updateLocalStorage(arr) {
   localStorage.setItem("notesData", newNoteJson);
 }
 
-//------------------------------------------ Creating a new note card and manipulating DOM
-
-function createNewNote(noteObj) {
-  const { theme, badgeSrc } = noteObj;
+function generateNote(noteObj) {
+  const { id, theme, badgeSrc } = noteObj;
 
   let newNoteCard = document.createElement("div");
   newNoteCard.classList.add("note-card");
   newNoteCard.style.backgroundColor = theme;
 
   // attaching the "id" to the noteCard so we can refer to it later while "deleting" or "updating" a note
-  newNoteCard.id = noteObj.id;
+  newNoteCard.id = id;
   newNoteCard.innerHTML = `
     <h3 class="note-title">${noteObj.title}</h3>
     <img class="user-badge" src="${badgeSrc}" alt="ninja badge">
@@ -199,3 +213,10 @@ function markTheNote(targetNote) {
   updateLocalStorage(notesArr);
   // -- Validate that changes has reflected in the "notesArr" as well and no page re-load is required
 }
+
+//------------------- Searching and displaying relevant notes
+
+searchInputField.addEventListener("input", (e) => {
+  textToSearch = e.target.value.toLowerCase();
+  renderNotes();
+});

@@ -1,4 +1,4 @@
-.display-notes {
+.notes-display-section {
   display: grid;
   place-content: center;
   padding: 1rem 0;
@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .note-card {
@@ -42,9 +42,9 @@
 
   .note-content {
     overflow-y: auto;
-    font-size: 0.9rem;
     font-family: $secondary-font;
     line-height: 1.6;
+    color: $fg-dim;
 
     &::-webkit-scrollbar {
       width: 0.3rem;

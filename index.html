@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -31,14 +31,24 @@
   <body>
     <div class="container">
       <header>
-        <h2>
+        <div id="logo">
           <img
             class="kunai spin"
             src="./assets/svgs/header/kunai.svg"
             alt="kunai"
           />
-          Ninja Notes
-        </h2>
+          <span>N</span>
+          <span>N</span>
+        </div>
+
+        <div class="note-search">
+          <input
+            type="text"
+            placeholder="search a note?"
+            class="search-input"
+          />
+          <i class="fas fa-search"></i>
+        </div>
       </header>
 
       <section class="create-notes">
@@ -54,13 +64,13 @@
             id="content"
             cols="30"
             rows="5"
-            placeholder="content..."
+            placeholder="take a note..."
           ></textarea>
           <button type="submit" class="submit-btn">Submit</button>
         </form>
       </section>
 
-      <section class="display-notes">
+      <section class="notes-display-section">
         <ul class="notes-list">
           <!-- dynamically generated notes will be displayed here  -->
         </ul>
