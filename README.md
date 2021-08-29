@@ -8,6 +8,9 @@ Quick-notes app (for ninjas 🐱‍👤) with localStorage for data persistency 
 - SCSS
 - localStorage
 
+### Mockup
+![application mockup](assets/mockup/ninja_notes_mockup.png)
+
 ## Features
 - User can add, update and delete a note
 - Important notes can be bookmarked
