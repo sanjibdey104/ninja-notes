@@ -1,59 +1,35 @@
-# Ninja Notes
-A vanilla JS CRUD centric note taking app with localStorage for data persistency
+# Pied Piper
+Quick-notes app (for ninjas 🐱‍👤) with localStorage for data persistency and privacy.
 
-#### catch it live @ https://sanjibdey104.github.io/ninja-notes/
+### live @ https://sanjibdey104.github.io/ninja-notes/
 
-### Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Attribution](#attribution)
-* [Contact](#contact)
-
-## General info
-The purpose is to serve as a basic note-keeping application.
-
-## Screenshots
-![Example screenshot](./image/desktop-screenshot.png)
-
-## Technologies
-* Vanilla Javascript
-* HTML5
-* SASS
+### Tech Stack
+- Vanilla JS
+- SCSS
+- localStorage
 
 ## Features
+- User can add, update and delete a note
+- Important notes can be bookmarked
+- Search notes by title or content
 
-* User can create, edit, delete a new note
-* Bookmark important notes
-* Toggle application theme (dark/light)
-* Data persistence using localstorage
-* Mobile and Desktop responsiveness
+## Goal
+- Learn how to implement full CRUD operation with plain JavaScript.
+- Using localStorage for persisting data locally at the user's end.
 
-   ### To-do list:
-   * Allow user to search for a note
-   * Allow category tags for better note sorting
+## Learnings
+- Implementing full CRUD operation with vanilla javascript.
+- Using localStorage for data persistency.
+- Extend application scope to features like bookmarking and search option.   
 
+## Challenges
+- Syncing localStorage with data updates.
+- Adding bookmarking option.
 
-## Status
-Project is live with above features and in-progress with the "to-do" scope
+## Prospective
+- Option to assign a label/category to the notes.
+- Notes filtering by category.
+- Application theme options.
 
-
-## Inspiration
-* Dark theme and sidebar is inspired by none other than [Brittany Chaiang's Portfolio Website](https://brittanychiang.com/)
-* Thanks to Rita for this [readme cheatsheet](https://github.com/ritaly/README-cheatsheet)
-
-
-## Attribution
-* SVG icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com)
-
-## Contact
-Created by [@sanjib104](https://twitter.com/Sanjib_104) 
-
-Mail: sanjibdey.dey4@gmail.com
-
-   *feel free to contact me!*
-
-
+### Attributions:
+- SVG icons by [Freepik](https://www.freepik.com)
