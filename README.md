@@ -1,5 +1,5 @@
 # Pied Piper
-Quick-notes app (for ninjas 🐱‍👤) with localStorage for data persistency and privacy.
+Full CRUD vanilla JS quick-notes app (for ninjas 🐱‍👤) with localStorage for data persistency
 
 #### live @ https://sanjibdey104.github.io/ninja-notes/
 
